@@ -1,0 +1,103 @@
+.featured-products {
+  font-size: 30px;
+  margin: 40px 0;
+  font-family: Montserrat;
+  color: #222222;
+  text-align: center;
+}
+
+.shelf-products {
+  width: 100%;
+  .product-img {
+    img {
+      width: 100%;
+    }
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    li {
+      cursor: pointer;
+      margin: 0 1.5%;
+      width: 22%;
+      box-shadow: 1px 1px 1px 1px #eeeeee;
+      padding: 15px;
+      box-sizing: border-box;
+      height: fit-content;
+      transition: all 300ms ease;
+
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+        
+      }
+
+      .product-buy {
+        cursor: pointer;
+        font-size: 13px;
+        text-transform: uppercase;
+        background-color: #ef7460;
+        color: #fff;
+        border: none;
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        opacity: 0;
+        visibility: hidden;
+        height: 0px;
+        overflow: hidden;
+        line-height: 0;
+        padding: 0;
+        transition: all 300ms ease;
+
+        img {
+          display: block;
+          margin-left: 10px;
+        }
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+          visibility: visible;
+          opacity: 1;
+          height: auto;
+          transform: scale(1);
+        }
+      }
+      &:hover {
+        transform: scale(1.1);
+        .product-buy {
+          opacity: 1;
+          visibility: visible;
+          height: auto;
+          overflow: hidden;
+          line-height: initial;
+          padding: 10px 15px;
+        }        
+      }
+
+      p {
+        width: 90%;
+        margin-bottom: 5px;
+        
+        &.product-name {
+          min-height: 30px;
+        }
+
+        &.product-price {
+          font-size: 10px;
+          color: #ef7460;
+          margin: 10px 0; 
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+.product__container {
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  .product__info,
+  .product__img {
+    margin: 20px;
+  }
+  .product__info {
+    width: 50%;
+    @media only screen and (max-width: 768px) {
+      width: 90%;      
+    }
+    h3 {
+      font-size: 40px;
+      padding: 0 20px 0 0;
+      letter-spacing: 0.7px;
+      margin: 50px 0 20px 0;
+    }
+
+    > span {
+      font-size: 14px;
+      color: #aaaaaa;
+      font-weight: bold;
+      margin: 10px 0 5px 0;
+      display: block;
+      text-decoration: line-through;
+    }
+    p {
+      font-size: 28px;
+      color: #ef7460;
+      font-weight: bold;
+      margin-bottom: 20px;
+
+      &.product-description {
+        font-size: 14px;
+        line-height: 18px;
+        color: #aaaaaa;
+        font-weight: 400;
+      }
+    }
+    .x-product__qts {
+      form {
+        display: inline-block;
+        box-shadow: 1px 1px 1px 1px #eeeeee;
+        button {
+          color: #ef7460;
+          font-size: 15px;
+          font-weight: 600;
+          text-align: center;
+        }
+      }
+      button {
+        background-color: #ffffff;
+        cursor: pointer;
+        font-size: 13px;
+        text-transform: uppercase;
+        border: none;
+      }
+      .product__qty-val {
+        width: 25px;
+        border: none;
+        text-align: center;
+        &:focus {
+          box-shadow: 0 0 0 0;
+          border: 0 none;
+          outline: 0;
+        }
+      }
+      .btn-buy {
+        background-color: #ef7460;
+        color: #fff;
+        border: none;
+        display: inline-block;
+        padding: 10px 20px;
+        font-weight: 500;
+        margin-left: 10px;
+        height: auto;
+        width: 200px;
+        border-radius: 2px;
+
+        img {
+          width: 10px;
+        }
+      }
+    }
+  }
+  .product__img {
+    width: 40%;
+
+    &-main {
+      padding: 25px;
+      margin: 0 0 10px;        
+      }
+    }
+    img {
+      border: 1px solid #eeeeee;
+      margin: 0 auto;
+      display: block;
+      width: auto;
+      
+      .thumbs {
+      display: flex;
+      img {
+        display: block;
+        width: 80px;
+        box-shadow: 1px 1px 1px 1px #eeeeee;
+        margin: 0 5px;
+      }
+    }
+  }
+}
